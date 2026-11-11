@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f8fa"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="한국어 노트.">
+<meta name="description" content="NCT WISHと一緒に韓国語を学ぶ自分専用ノート">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg">
+<link rel="apple-touch-icon" href="./icon-192.png"><link rel="stylesheet" href="./style.css">
+<title>한국어 노트. — NCT WISH Edition</title>
+</head>
+<body>
+<div class="shell">
+<header><a class="brand" href="#home"><span class="mark">한</span><span><b>한국어 노트.</b><small>NCT WISH EDITION</small></span></a><span class="level">TOPIK 3–4</span><button id="install" class="install" hidden>＋</button></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div><small class="eyebrow">YOUR KOREAN STUDY SPACE</small><h1>좋아하는 마음으로,<br>한국어를 더 깊게.</h1><p>好きな音楽やコンテンツを楽しみながら、韓国語を学ぼう。</p><button data-page="lyrics" class="primary">今日の学習を始める →</button></div><div class="hero-mark">W✳</div></div>
+<div class="heading"><div><small class="eyebrow">MY PROGRESS</small><h2>学習の記録</h2></div><small>このiPad内に保存</small></div>
+<div class="stats"><article><small>保存した単語</small><b id="wordCount">0</b><small>MY VOCABULARY</small></article><article><small>完了した学習</small><b id="doneCount">0</b><small>COMPLETED</small></article></div>
+<div class="heading"><div><small class="eyebrow">STUDY MENU</small><h2>学習カテゴリー</h2></div></div>
+<div class="tiles">
+<button data-page="lyrics"><i>♫</i><b>歌詞で学ぶ</b><small>単語・文法・表現</small></button>
+<button data-page="video"><i>▷</i><b>動画で学ぶ</b><small>聞き取り・会話</small></button>
+<button data-page="members"><i>✳</i><b>メンバー別ノート</b><small>6人の表現を整理</small></button>
+<button data-page="topik"><i>Aa</i><b>TOPIKトレーニング</b><small>3〜4級の語彙・文法</small></button>
+</div>
+<div class="panel daily"><small class="eyebrow">TODAY'S WORD</small><h2>설레다</h2><p>わくわくする・胸がときめく</p><p class="example">좋아하는 가수를 만나서 설렜어요.<br>好きなアーティストに会えて胸がときめきました。</p><button class="outline" data-save="설레다">単語帳に保存</button></div>
+</section>
+<section id="lyrics" class="page">
+<div class="pagetitle"><small class="eyebrow">MUSIC & LYRICS</small><h1>歌詞から学ぶ</h1><p>曲を聴きながら、表現・語彙・文法を深掘り。</p></div>
+<div class="notice">歌詞全文は転載せず、公式音源へのリンクと短い学習用表現・オリジナル例文で学習します。</div>
+<div class="panel song"><div class="cover">W</div><div><b>WISH (Korean Ver.)</b><small>NCT WISH · 楽曲学習</small><a href="https://www.youtube.com/@NCTWISH" target="_blank" rel="noopener">公式YouTubeで聴く ↗</a></div><button class="outline" data-done="song-wish">学習済み</button></div>
+<div class="panel song"><div class="cover lilac">S</div><div><b>Songbird</b><small>NCT WISH · 楽曲学習</small><a href="https://www.youtube.com/@NCTWISH" target="_blank" rel="noopener">公式YouTubeで聴く ↗</a></div><button class="outline" data-done="song-songbird">学習済み</button></div>
+<div class="panel"><small class="eyebrow">EXPRESSION NOTE · TOPIK 3</small><h2>함께라면</h2><p>一緒なら・一緒であれば</p><div class="example"><b>너와 함께라면 행복해.</b><br>あなたと一緒なら幸せ。</div><p><b>文法：</b>-(이)라면 ／「〜なら」と仮定を表す表現。</p><button class="outline" data-save="함께">「함께」を単語帳に保存</button></div>
+</section>
+<section id="video" class="page">
+<div class="pagetitle"><small class="eyebrow">WATCH & LEARN</small><h1>動画で学ぶ</h1><p>公式コンテンツを見て、聞き取れた表現をノートに残そう。</p></div>
+<a class="youtube panel" href="https://www.youtube.com/@NCTWISH" target="_blank" rel="noopener"><span>▶</span><b>NCT WISH 公式YouTube<small>インタビュー・バラエティ・ビハインド</small></b>↗</a>
+<div class="panel"><small class="eyebrow">LISTENING PRACTICE · TOPIK 3</small><h2>오늘 정말 재미있었어요.</h2><p>今日は本当に楽しかったです。</p><button class="outline" id="explain">表現の解説を見る</button><div id="explanation" hidden><p><b>정말</b>：本当に</p><p><b>재미있다</b>：面白い・楽しい</p><p><b>-었어요</b>：過去を表す丁寧な語尾</p></div></div>
+<div class="panel"><label for="videoNote">動画で見つけた表現・メモ</label><textarea id="videoNote" placeholder="例：진짜요? / 本当ですか？"></textarea><button class="primary" id="saveNote">メモを保存</button><small id="noteStatus"></small></div>
+</section>
+<section id="members" class="page">
+<div class="pagetitle"><small class="eyebrow">MEMBER STUDY</small><h1>メンバー別ノート</h1><p>6人の公式コンテンツから表現を集めよう。</p></div>
+<div class="members" id="members"></div><div class="panel" id="memberPanel"><small class="eyebrow">MY STUDY NOTE</small><h2>メンバーを選択</h2><p>選んだメンバーの動画・インタビューで気づいた表現を記録できます。</p><textarea id="memberNote" placeholder="聞き取った表現や気づきをメモ"></textarea><button class="primary" id="saveMemberNote">メモを保存</button></div>
+</section>
+<section id="topik" class="page">
+<div class="pagetitle"><small class="eyebrow">TOPIK TRAINING</small><h1>TOPIK 3〜4級</h1><p>推し活で出会った表現を、試験で使える韓国語へ。</p></div>
+<div class="panel"><small class="eyebrow">VOCABULARY · LEVEL 3</small><h2>부담스럽다</h2><p>最も近い意味を選んでください。</p><div class="options"><button data-answer="A">A. 負担に感じる</button><button data-answer="B">B. 楽しく感じる</button><button data-answer="C">C. 驚きを感じる</button><button data-answer="D">D. 誇りに思う</button></div><p id="result" aria-live="polite"></p></div>
+<div class="panel"><small class="eyebrow">GRAMMAR NOTE · LEVEL 3</small><h2>-(으)ㄴ/는 편이다</h2><p>〜するほうだ・比較的〜だ</p><div class="example"><b>저는 아침에 일찍 일어나는 편이에요.</b><br>私は朝、早く起きるほうです。</div><p>動詞は「-는 편이다」、形容詞は「-(으)ㄴ 편이다」。</p><button class="outline" data-done="grammar">学習済みにする</button></div>
+</section>
+<section id="vocabulary" class="page">
+<div class="pagetitle"><small class="eyebrow">MY VOCABULARY</small><h1>自分だけの単語帳</h1><p>保存した単語をいつでも見返せます。</p></div><div id="vocabList"></div>
+<div class="notice">単語・学習履歴・メモは、このブラウザのこのiPad内に保存されます。SafariのWebサイトデータを消去すると失われる場合があります。定期的にバックアップしてください。</div>
+<button class="outline" id="export">学習データをバックアップ</button><label class="outline import">バックアップを読み込む<input type="file" id="import" accept="application/json"></label>
+</section>
+</main>
+<nav class="bottom">
+<button data-page="home" class="selected"><span>⌂</span><small>ホーム</small></button><button data-page="lyrics"><span>♫</span><small>歌詞</small></button><button data-page="video"><span>▷</span><small>動画</small></button><button data-page="members"><span>✳</span><small>メンバー</small></button><button data-page="topik"><span>Aa</span><small>TOPIK</small></button><button data-page="vocabulary"><span>▤</span><small>単語帳</small></button>
+</nav>
+</div><script src="app.js"></script>
+</body></html>
